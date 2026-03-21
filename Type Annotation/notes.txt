@@ -1,0 +1,13 @@
+<!-- Type Annotation -->
+// me samjaunga
+
+let a: number;
+
+<!-- -->
+let chaiFlaver: string = "masala chai"
+chaiFlaver = "ginger tea"
+chaiFlaver = 2 // error
+
+<!-- -->
+let chaiOrder: number
+let chaiOrder: boolean

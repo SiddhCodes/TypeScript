@@ -1,0 +1,14 @@
+<!-- Union -->
+
+let sub = 10
+let sub = "1M"
+
+let sub: number | string = 10
+let sub: number | string = "1M"
+
+<!-- -->
+
+let apiRequistStatus: 'Pending' | 'Succes' | 'Error' = 'Pending'
+apiRequistStatus = "Siddhant" // Error
+apiRequistStatus = 'Succes'
+apiRequistStatus = "done" // Error

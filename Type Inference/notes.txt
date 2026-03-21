@@ -1,0 +1,17 @@
+<!-- Type Inference -->
+// app apane aap se samaj jao
+
+let a = 12 // automatic let a: number
+
+let drink = "chai" // let drink: string
+drink = 2 // error
+
+<!-- -->
+let cups = Math.random() > .5 ? 10 : 5 // let cups: number
+
+<!-- -->
+let cups = Math.random() > .5 ? 10 : "5" // let cups: string | number
+
+<!-- -->
+let channelName = "Chai aur Code"
+channelName = 12221

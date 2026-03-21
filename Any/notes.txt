@@ -11,3 +11,22 @@ a = "Siddhant"
 let a: number;
 a = 12
 a = "Siddhant" // Error
+
+<!-- -->
+const orders = ['12', '13', '14', '15']
+
+// let currentOrder; // let currentOrder: any;
+// let currentOrder: string;
+let currentOrder: string | undefind;
+
+for (let order of orders){
+    if(order === '28'){
+        currentOrder = order
+        break
+    }
+    currentOrder = '11'
+}
+
+// currentOrder = 42 // Error
+
+console.log(currentOrder) // let currentOrder: string | undefind
