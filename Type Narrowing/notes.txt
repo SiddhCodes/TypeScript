@@ -1,0 +1,10 @@
+<!-- Type Narrowing -->
+
+function getChai (kind: string | number){
+    if(typeOf kind === "string"){
+        return `making ${kind}`
+        kind. // you will get all the methods of string
+    }
+    return `chai order ${kind}`
+    kind. // you will get all the methods of number
+}

@@ -1,0 +1,91 @@
+<!-- Type Guards -->
+
+class KulhadChai {
+    serve(){
+        return `serving Kulhad Chai`
+    }
+}
+
+class Cutting {
+    serve(){
+        return `serving Cutting Chai`
+    }
+}
+
+function serve(chai: KulhadChai | Cutting){
+    if(chai instanceOf KulhadChai){
+        return chai.serve()
+    }
+}
+
+<!-- -->
+
+type ChaiOrder {
+    type: string,
+    suger: numbber
+}
+
+function isChaiOrder (obj: any): obj is ChaiOrder{
+    return {
+        typeOf obj === "object" && obj !== null && typeOf obj.type === "string" && typeOf obj.suger === "number"
+    }
+}
+
+function serverOrder(item: ChaiOrder | string){
+    if(isChaiOrder(item)){
+        return `Serving ${item.type} chai with ${item.suger} suger`
+    }
+    return `Serving Custom chai: ${item}`
+}
+
+<!-- -->
+
+type MasalaChai {
+    type: "Masala";
+    spiceLevel: number;
+}
+
+type GingerChai {
+    type: "Ginger";
+    amount: number;
+}
+
+type ElaichiChai {
+    type: "Masala";
+    aroma: number;
+}
+
+type Chai = MasalaChai | GingerChai | ElaichiChai
+
+function MakeChai (order: Chai){
+    switch(order.type){
+        case "MasalaChai":
+            return `Masala Chai`
+            break
+
+        case "GingerChai":
+            return `Ginger Chai`
+            break
+
+        case "ElaichiChai":
+            return `Elaichi Chai`
+            break
+
+        default: 
+            break
+    }
+}
+
+<!-- -->
+
+function Brew (order: MasalaChai | GingerChai){
+    if("spiceLevel" in order){
+        //
+    }
+}
+
+<!-- -->
+
+function isStringArray (arr: unknown): arr is string[]{
+    //
+}
