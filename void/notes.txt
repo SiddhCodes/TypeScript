@@ -1,0 +1,23 @@
+<!-- void -->
+
+function abocd (): void{
+    console.log("hello");
+}
+
+<!-- -->
+
+function abocd (): string{
+    return "hello"
+}
+
+<!-- -->
+
+function abocd (): number{
+    return 20
+}
+
+<!-- -->
+
+function abocd (): Boolean{
+    return true
+}

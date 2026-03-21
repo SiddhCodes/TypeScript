@@ -1,0 +1,3 @@
+<!-- Tupple -->
+
+const Arr: [number, string] = [20, "Siddhant"];

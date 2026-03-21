@@ -1,0 +1,9 @@
+<!-- Unknown -->
+
+let a: unknown;
+a = 12
+a = "Siddhant"
+
+if(typeOf a === "string"){
+    a.toUpperCase();
+}

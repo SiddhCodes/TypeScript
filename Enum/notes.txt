@@ -1,0 +1,17 @@
+<!-- Enum -->
+
+enum UserRoles {
+    ADMIN: "admin",
+    GUEST: "guest",
+    SUPER_ADMIN: "super_admin"
+}
+
+UserRoles.SUPER_ADMIN
+
+<!-- -->
+
+enum StatusCodes {
+    notFound: "404"
+}
+
+StatusCodes.notFound

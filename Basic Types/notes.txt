@@ -1,0 +1,12 @@
+<!-- Basic Types -->
+
+1) Primitives Types (Number, String, Boolean)
+2) Array
+3) Tupple
+4) Enum
+5) Any
+6) Unknown
+7) void
+8) Null
+9) Undefind
+10) Never

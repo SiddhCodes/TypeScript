@@ -1,0 +1,10 @@
+<!-- Never -->
+
+function abcd (): Never{
+    while(true){
+        console.log("Siddhant")
+    }
+}
+
+abcd()
+console.log("hello") // dull

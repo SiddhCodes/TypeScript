@@ -1,0 +1,13 @@
+<!-- Any -->
+let a; // Type any
+let a: any 
+
+<!-- -->
+let a;
+a = 12
+a = "Siddhant"
+
+<!-- -->
+let a: number;
+a = 12
+a = "Siddhant" // Error
