@@ -1,0 +1,27 @@
+<!-- Type Aliases -->
+
+type sankhya = number
+
+let a: sankhya;
+
+<!-- -->
+
+let a: string | number | null // wrong
+
+let value = string | number | null 
+
+let a: value;
+
+<!-- -->
+
+function fn(obj: string | number | null ){
+
+}
+
+type objProp = string | number | null 
+
+function fn(obj: objProp){
+
+}
+
+fn("siddhant")

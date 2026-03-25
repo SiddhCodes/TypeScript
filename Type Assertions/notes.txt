@@ -1,0 +1,33 @@
+<!-- Type Assertion -->
+
+let a: any = 12;
+
+(a as string). // ypu will get string methods
+
+(a as number). // you will get number methods
+
+<!-- -->
+
+let response: any = "12"
+
+let numericLength: number = (response as string). // you will get all the string methods
+
+<!-- -->
+
+type Book {
+    name = string
+}
+
+let bookString = `{"name": "who movied my cheese"}`
+let bookObject =    JSON.parse(bookString)
+bookObject. // you will not get suggetions
+
+but
+
+let bookString = `{"name": "who movied my cheese"}`
+let bookObject =    JSON.parse(bookString) as Book
+bookObject. // you will get suggetions
+
+<!-- -->
+
+const inputElements = document.getElementById("username") as HTMLInputElement

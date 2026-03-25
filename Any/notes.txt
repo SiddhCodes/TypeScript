@@ -30,3 +30,25 @@ for (let order of orders){
 // currentOrder = 42 // Error
 
 console.log(currentOrder) // let currentOrder: string | undefind
+
+<!-- -->
+let value: any;
+
+value = "chai"
+value = [1,2,3]
+value = 2.5
+value.toUpperCase()
+
+let newValue: unknown
+
+value = "chai"
+value = [1,2,3]
+value = 2.5
+value.toUpperCase()
+// error
+
+// but when you actualy use
+if(newValue === "string"){
+    newValue.toUpperCase()
+}
+// correct

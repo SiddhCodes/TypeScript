@@ -1,0 +1,80 @@
+<!-- Interfaces -->
+
+interface User {
+    name: string,
+    email: string,
+    password: string,
+    gender?: string
+}
+
+function getDataOfUser (Obj: User) {
+    obj. 
+}
+
+getDataOfUser({}) // missing name, email, password
+
+getDataOfUser({
+    name: "Siddhant",
+    email: "siddhantmul18@gmail.com",
+    password: "1234567890"
+}) // correct
+
+getDataOfUser({
+    name: "Siddhant",
+    email: "siddhantmul18@gmail.com",
+    password: "1234567890",
+    age: 20
+}) // error
+
+getDataOfUser({
+    name: "Siddhant",
+    email: "siddhantmul18@gmail.com",
+    password: "1234567890",
+    gender: "Male"
+}) // correct
+
+interface User {
+    name: string,
+    email: string,
+    password: string
+}
+
+const obj = {
+    name: "Siddhant",
+    email: "siddhantmul18@gmail.com",
+    password: "1234567890"
+}
+
+<!-- Extending Interfaces -->
+
+interface User {
+    name: string,
+    email: string,
+    password: string
+}
+
+interface Admin extends User {
+    admin: boolean
+}
+
+function abcd(obj: User){
+    obj.admin // d0 not have acces
+}
+
+function abcd(obj: Admin){
+    obj.admin // acces
+}
+
+<!-- Interfaces mearg -->
+
+interface abcd{
+    name: string
+}
+
+interface abcd{
+    email: string
+}
+
+function Abcd(obj: abcd){
+    obj. // acces name, email
+}

@@ -1,0 +1,68 @@
+<!-- Function -->
+
+function abcd(): string{
+    return "Hay" // fn return string
+}
+
+<!-- -->
+
+function abcd(): void{
+    console.log("Hay")
+}
+
+<!-- -->
+
+function abcd(name: string, cb: (value: string)=> void){
+    cb("Hay")
+}
+
+abcd("Siddhant", (value: string)=>{
+    console.log(value)
+})
+
+<!-- -->
+
+function abcd (name: string, age: number, gender?: string, Human: boolean = true ){
+    console.log(name, age, gender, Human)
+}
+
+abcd("siddhant", 20, "Male")
+abcd("Yash", 20)
+
+<!-- Rest Para -->
+
+function abcd(...args: number[]){
+
+}
+
+abcd(1,2,3,4,5,6,7,8)
+
+<!-- Function overloading -->
+
+function abcd (){
+    
+}
+
+function abcd (){
+
+}
+
+<!-- Function signature -->
+
+function abcd (a: string): void{
+
+}
+
+function abcd (a: any, b?: any) number{
+    if( typeOf a === "string" && typeOf b === undefind){
+        console.log("Hay")
+    }
+
+    if( typeOf a === "string" && typeOf b === "number"){
+        return 123;
+    }
+
+    else trow new Error ("something is wrong")
+}
+
+<!-- -->

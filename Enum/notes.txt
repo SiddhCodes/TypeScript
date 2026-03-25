@@ -15,3 +15,48 @@ enum StatusCodes {
 }
 
 StatusCodes.notFound
+
+<!-- -->
+
+enum Status {
+    PENDING = 100,
+    SERVED, // automaticly 102
+    CANCELLED, // automaticly 103
+}
+
+<!-- -->
+
+enum ChaiType {
+    MASALA = "masala",
+    GINGER = "ginger"
+}
+
+function makeChai (type: ChaiType){
+    console.log(`Making: ${type}`)
+}
+
+makeChai(ChaiType. // you will get values)
+makeChai("masala") // wrong
+
+<!-- -->
+
+enum RndomEnum { // always same data type
+    ID = 1,
+    NAME = "Chai"
+}
+
+<!-- -->
+
+const enum Suger {
+    LOW = 1,
+    MWDIUM = 2,
+    HIGH = 3
+}
+
+const s = Suger.HIGH
+
+<!-- -->
+
+let t: [string, number] = ["Chai', 10]
+
+t.push("Extra") // unexpected behavior

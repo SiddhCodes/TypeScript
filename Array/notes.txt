@@ -1,0 +1,41 @@
+<!-- Array -->
+
+const chaiFlavours: string[] = ["Masala", "Adrak"]
+
+const chaiPrice: number[] = [] // [1,2,3]
+
+<!-- -->
+
+const rating: Array<number> // custom data type 
+const rating: Array<number> [4.5, 5.2]
+
+<!-- -->
+
+type Chai ={
+    name: string;
+    price: number;
+}
+
+const menu: Chai[] = [
+    {
+        name: "Masala",
+        price: 50
+    },
+    {
+        name: "Adrak",
+        price: 30
+    }
+]
+
+<!-- readonly Array -->
+
+const cities: readonly string[] = ["Delhi", "Nagpur"]
+
+cities. // you dont get suggetions 
+
+<!-- -->
+
+const table: number[][] = [
+    [1,2,3],
+    [4,5,6]
+] 

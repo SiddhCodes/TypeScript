@@ -1,0 +1,24 @@
+<!-- Try Catch Block -->
+
+try{
+
+} catch (error: any) {
+    console.log(error.message)
+}   
+
+<!-- Correct -->
+
+try{
+
+} catch (error) {
+    if(error instanceOf Error){
+        console.log(error.message)
+    }
+    console.log("Error",error)
+}   
+
+<!-- -->
+
+const data: unknown = "chai aur code"
+
+const strData: string = data as string

@@ -8,3 +8,39 @@ function abcd (): Never{
 
 abcd()
 console.log("hello") // dull
+
+<!-- -->
+
+type Role = "Admin" | "User"
+
+function redirectBasedOnRole (role: Role): void{
+    if(role === "Admin"){
+        console.log("redirection to the Admin Dashboard")
+        return
+    }
+
+    if(role === "User"){
+        console.log("redirection to the User Dashboard")
+        return
+    }
+
+    role; // type never
+}
+
+<!-- -->
+
+type Role = "Admin" | "User" | "SuperAdmin"
+
+function redirectBasedOnRole (role: Role): void{
+    if(role === "Admin"){
+        console.log("redirection to the Admin Dashboard")
+        return
+    }
+
+    if(role === "User"){
+        console.log("redirection to the User Dashboard")
+        return
+    }
+
+    role; // type SuperAdmin
+}

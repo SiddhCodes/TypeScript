@@ -1,3 +1,26 @@
 <!-- Tupple -->
 
 const Arr: [number, string] = [20, "Siddhant"];
+
+<!-- -->
+
+let chaiTuples: [string, number]
+
+chaiTuples = ["Masala", 20] // correct
+
+chaiTuples = [20, "Masala"] // not allowed
+
+<!-- -->
+
+let userInfo: [string, number, boolean?]
+
+userInfo = ["Siddhant", 100]
+userInfo = ["Siddhant", 100, true]
+
+<!-- Readonly Tupple -->
+
+let userInfo: Readonly [string, number, boolean?] = ["Siddhant", 100, true]
+
+<!-- named Tupple -->
+
+cost chaiItems: [name: string, price: number] = ["Masala", 50]
