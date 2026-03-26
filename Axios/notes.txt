@@ -1,0 +1,39 @@
+<!-- Axios -->
+
+npm i -D @types/axios
+
+import axios, {Type AxiosResponce} from "axios"
+
+interface Todo {
+    userId: number;
+    id: number;
+    title: string;
+    completed: boolean
+}
+
+/*
+
+axios.get("url")
+.then(res =>{
+    console.log(res.data)
+})
+
+*/
+
+const fetchData = async () {
+    try{
+        const responce: AxiosResponce<Todo> = await axios.get("url")
+        console.log("Todo", responce. // you will get suggestions)
+
+    } catch (error: any){
+        // console.log(error.message) 
+        if(axios.isAxiosError(error)){
+        console.log("Axios Error",error)  
+        
+        if(error.responce){
+            console.log(error.responce.status)
+        }
+
+        }
+    }
+}

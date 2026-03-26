@@ -1,0 +1,88 @@
+<!-- Generics -->
+
+functrion logger(arg: string){
+
+}
+
+logger("Siddhant")
+logger(true) // error
+
+<!-- -->
+
+functrion logger(arg: any){
+    arg. // no help
+}
+
+logger("Siddhant")
+logger(true) 
+
+<!-- -->
+
+functrion logger<T>(arg: T) { // T = string | T = boolean | T = number
+   
+}
+
+logger<string>("Siddhant")
+logger<boolean>(true)
+logger<number>(20)
+
+<!-- Interface -->
+
+Interface Hello <T> {
+    name: string;
+    age: number;
+    // key: string | null
+    key: T
+}
+
+function abcd(obj: Hello<string>){
+    obj.key. // you will get string suggetions
+}
+
+abcd({
+    name: "Siddhant",
+    key: "jdfljslk"
+})
+
+<!-- Class -->
+
+class BottleMaker<T> {
+    constructor(key: T){
+
+    }
+}
+
+let B1 = new BottleMaker<string>("jfhalf")
+console.log(B1)
+
+let B2 = new BottleMaker<number>(12436563)
+console.log(B2)
+
+<!-- -->
+
+function abcd<T>(a: T, b: T): T{
+    return a // correct
+    return b // correct
+    return "siddhant" // wrong
+}
+
+abcd<string>("hello", "hay")
+
+<!-- or -->
+
+function abcd<T>(a: T, b: T): T{
+    return a // correct
+    return b // correct
+
+    return "siddhant" // wrong
+
+    return "siddhant" as T; // correct
+    return <T>"siddhant"; // correct
+
+    // jab tak aap type narrowing nahi karoge tab tak suggetions nahi milege
+    if(typeOf a === "string"){
+        a. // you will get suggetions
+    }
+}
+
+abcd<string>("hello", "hay")

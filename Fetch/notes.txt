@@ -1,0 +1,35 @@
+<!-- Fetch -->
+
+npm i -D @types/axios
+
+interface Todo {
+    userId: number;
+    id: number;
+    title: string;
+    completed: boolean
+}
+
+/*
+
+fetch.get("url")
+.then(res =>{
+    console.log(res.data)
+})
+
+*/
+
+const fetchData = async () {
+    try{
+        const responce: = await fetch("url")
+        console.log("Todo", responce. // you will get suggestions)
+
+        if(!responce.ok){
+            throw new Error(`HTTP error ${responce.status}`)
+        }
+
+        const data: Todo = await responce.json()
+
+    } catch (error: any){
+        
+    }
+}

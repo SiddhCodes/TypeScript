@@ -1,0 +1,147 @@
+<!-- Object -->
+
+const chai = {
+    name: "masala chai",
+    price: 20,
+    isHot: true 
+}
+
+{
+    nme: string;
+    price: number;
+    isHot: boolean
+}
+
+// auto infer
+
+<!-- -->
+
+let tea = {
+    name: string;
+    price: number;
+    isHot: boolean
+}
+
+const tea = {
+    name: "Ginger tea",
+    price: 25,
+    isHot: true
+}
+
+<!-- -->
+
+type Tea = {
+    name: string;
+    price: number;
+    ingrediansts: string[]
+}
+
+const adrakChai: Tea = {
+    name: "Adrack Tea",
+    price: 25,
+    ingrediansts: ["Ginger","tealeaves"]
+}
+
+<!-- duck typing -->
+
+type Cup = {
+    size: string;
+}
+
+let smallCup: Cup = {size: "200ml"}
+
+let bigCup = {size: "500ml", material: "steel"}
+
+smallCup = bigCup
+
+<!-- -->
+
+type Item = {
+    name: string;
+    quantity: number
+}
+
+type Address = {
+    street: string, 
+    pin: number
+}
+
+type Order = {
+    id: string;
+    item: Item [];
+    address: Address []
+}
+
+<!-- Partial -->
+
+type Chai = {
+    name: string;
+    price: number;
+    isHot: boolean
+}
+
+const updateChai = (update: Partial<Chai>) => {
+    console.log("updating chai with", update)
+}
+
+updateChai({
+    price: 25
+})
+
+updateChai({isHot: false})
+
+updateChai({}) // issue
+
+<!-- Required -->
+
+type ChaiOrder = {
+    name?: string;
+    quantity?: number
+}
+
+const placeOrder = (order: Required<ChaiOrder>){
+    console.log(order)
+}
+
+placeOrder() // error
+
+placeOrder({
+    name: "masala Chai"
+}) // error
+
+placeOrder({
+    name: "masala Chai",
+    quantity: 2
+}) // correct
+
+
+<!-- pick --> // Less use
+
+type Chai = {
+    name: string;
+    price: number;
+    isHot: boolean;
+    ingrediansts: street[]
+}
+
+type BasicChaiInfo = pick<Chai, "name" | "">;
+
+const chaiInfo: BasicChaiInfo = {
+    // missing properties
+}
+
+const chaiInfo: BasicChaiInfo = {
+    name: "Lemon tea",
+    price: 30
+}
+
+<!-- -->
+
+type newChai = {
+    name: string;
+    price: number;
+    isHot: boolean;
+    secretIngrediansts: street
+}
+
+type PublicChai = Omit<Chai, "secretIngrediansts">;
